@@ -22,6 +22,7 @@
 
 #include "avshws.h"
 
+//（总结：operator new是用来分配内存的函数，为new操作符调用。能够被重载（有限制）
 PVOID operator new
 (
     size_t          iSize,
