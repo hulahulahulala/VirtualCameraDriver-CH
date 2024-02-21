@@ -905,6 +905,11 @@ CaptureDeviceDescriptor = {
 
 extern "C" DRIVER_INITIALIZE DriverEntry;
 
+//DriverEntry 是在加载驱动程序后调用的第一个驱动程序提供的例程。 它负责初始化驱动程序。
+//DriverObject [in]
+//指向 DRIVER_OBJECT 结构的指针，该结构表示驱动程序的 WDM 驱动程序对象。
+//RegistryPath [in]
+//指向 UNICODE_STRING 结构的指针，该结构指定注册表中驱动程序 的 Parameters 键 的路径。
 extern "C"
 NTSTATUS
 DriverEntry (
