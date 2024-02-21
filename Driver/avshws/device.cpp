@@ -945,6 +945,7 @@ Return Value:
     // at add & start.  Everything is done based on the descriptors passed
     // here.
     //
+/*只需将设备描述符和参数传递给AVStream即可初始化我们。这将导致在添加和启动时设置过滤器工厂。一切都是基于这里传递的描述符完成的。*/
 	return
         KsInitializeDriver (
             DriverObject,
