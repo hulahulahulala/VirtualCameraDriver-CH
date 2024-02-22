@@ -788,6 +788,7 @@ Routine Description:
 
     Return the number of frame intervals that have elapsed since the
     start of the device.  This will be the frame number.
+    返回自设备启动以来经过的帧间隔数。 这将是帧编号。
 
 Arguments:
 
@@ -879,7 +880,7 @@ DEFINE_KSFILTER_DESCRIPTOR_TABLE (FilterDescriptors) {
 // through this table.
 //
 const
-KSDEVICE_DISPATCH
+KSDEVICE_DISPATCH //KSDEVICE_DISPATCH结构描述了客户端可以提供的回调，以接收设备创建和 PnP 事件的通知。
 CaptureDeviceDispatch = {
     CCaptureDevice::DispatchCreate,         // Pnp Add Device
     CCaptureDevice::DispatchPnpStart,       // Pnp Start
