@@ -246,6 +246,14 @@ Return Value:
         // not required, but it is still safe.
         //
         KsAcquireDevice (Device);//KsAcquireDevice 函数通过获取设备互斥体来获取 Device 的同步访问。
+	/*
+	[in] ObjectBag
+	KSOBJECT_BAG (等效于要向其添加所请求项的 PVOID) 类型。 每个 AVStream 对象 (例如 ，KSFILTER 和 KSPIN) 都包含一个名为 Bag 的成员。 在此参数中传递该成员。
+	[in] Item
+	指向要添加到对象包的项的指针。
+	[in, optional] Free
+	从对象包中删除项目或删除对象包时调用的函数。 此函数通常用于释放与 Item 关联的任何动态内存。
+     	*/
         Status = KsAddItemToObjectBag (
             Device -> Bag,
             reinterpret_cast <PVOID> (CapDevice),
@@ -271,7 +279,7 @@ Return Value:
 NTSTATUS
 CCaptureDevice::
 PnpStart (
-    IN PCM_RESOURCE_LIST TranslatedResourceList,
+    IN PCM_RESOURCE_LIST TranslatedResourceList,//CM_PARTIAL_RESOURCE_LIST结构指定分配给设备的一组不同类型的系统硬件资源。 此结构包含在 CM_FULL_RESOURCE_DESCRIPTOR 结构中。
     IN PCM_RESOURCE_LIST UntranslatedResourceList
     )
 
