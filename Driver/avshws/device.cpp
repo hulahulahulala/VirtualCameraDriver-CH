@@ -319,7 +319,7 @@ Return Value:
 
     if (!m_Device -> Started) {
         // Create the Filter for the device
-        KsAcquireDevice(m_Device);
+        KsAcquireDevice(m_Device);//KsAcquireDevice 函数通过获取设备互斥体来获取 Device 的同步访问。
         Status = KsCreateFilterFactory( m_Device->FunctionalDeviceObject,
                                         &CaptureFilterDescriptor,
                                         L"GLOBAL",
@@ -327,7 +327,7 @@ Return Value:
                                         KSCREATE_ITEM_FREEONSTOP,
                                         NULL,
                                         NULL,
-                                        NULL );
+                                        NULL );//** KsCreateFilterFactory** 函数将筛选器工厂添加到给定的设备。
         KsReleaseDevice(m_Device);
 
     }
