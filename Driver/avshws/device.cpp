@@ -40,7 +40,7 @@ PVOID operator new
 
     return result;
 }
-
+//NonPagedPoolMustSucceed 从非分页内存池中分配内存，如果不能分配则产生bugcheck
 PVOID operator new
 (
     size_t          iSize,
