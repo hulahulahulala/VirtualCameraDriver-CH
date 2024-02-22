@@ -32,7 +32,7 @@ PVOID operator new
     POOL_TYPE       poolType
 )
 {
-    PVOID result = ExAllocatePoolWithTag(poolType,iSize,'wNCK');
+    PVOID result = ExAllocatePoolWithTag(poolType,iSize,'wNCK');//根据指定存储区类型参数分配一段空间，并把该空间的首地址作为返回值发送给调用者。
 
     if (result) {
         RtlZeroMemory(result,iSize);
