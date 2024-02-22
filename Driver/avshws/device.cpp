@@ -245,7 +245,7 @@ Return Value:
         // the device mutex before doing this.  For Windows XP, this is
         // not required, but it is still safe.
         //
-        KsAcquireDevice (Device);
+        KsAcquireDevice (Device);//KsAcquireDevice 函数通过获取设备互斥体来获取 Device 的同步访问。
         Status = KsAddItemToObjectBag (
             Device -> Bag,
             reinterpret_cast <PVOID> (CapDevice),
