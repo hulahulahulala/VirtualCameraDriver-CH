@@ -99,6 +99,7 @@ Return Value:
     None
 
 --*/
+//__cdecl 是C Declaration的缩写（declaration，声明），cdecl调用方式又称为C调用方式，是C语言缺省的调用方式。
 void 
 __cdecl 
 operator delete[](
