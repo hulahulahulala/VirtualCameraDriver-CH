@@ -225,7 +225,7 @@ Return Value:
     PAGED_CODE();
 
     NTSTATUS Status;
-
+//这里看起来像是在设置一个新的设备了
     CCaptureDevice *CapDevice = new (NonPagedPoolNx, 'veDC') CCaptureDevice (Device);
 
     if (!CapDevice) {
