@@ -60,6 +60,8 @@ PVOID operator new
     return result;
 }
 
+//这段代码是重载了数组版本的 operator new[] 函数，
+//用于在 Windows 内核模式下动态分配数组类型的内存。它与之前提到的 operator new 函数类似，不同之处在于它用于分配数组类型的内存。
 PVOID 
 operator new[](
     size_t          iSize,
