@@ -429,12 +429,14 @@ Arguments:
         The capture sink attempting to acquire resources.  When scatter /
         gather mappings are completed, the capture sink specified here is
         what is notified of the completions.
+ 尝试获取资源的捕获接收器。 完成分散/收集映射后，此处指定的捕获接收器是完成通知的内容。
 
     VideoInfoHeader -
         Information about the capture stream.  This **MUST** remain
         stable until the caller releases hardware resources.  Note
         that this could also be guaranteed by bagging it in the device
         object bag as well.
+有关捕获流的信息。 此 **必须** 保持稳定，直到调用方释放硬件资源。 请注意，这也可以通过将其装袋在设备对象包中来保证。
 
 Return Value:
 
