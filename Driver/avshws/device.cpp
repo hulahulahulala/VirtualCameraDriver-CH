@@ -221,7 +221,7 @@ Return Value:
 --*/
 
 {
-
+//PAGED_CODE 宏确保调用方线程在足够低的允许分页的 IRQL 上运行。
     PAGED_CODE();
 
     NTSTATUS Status;
