@@ -46,6 +46,7 @@ Routine Description:
     This is the creation dispatch for the capture filter.  It creates
     the CCaptureFilter object, associates it with the AVStream filter
     object, and bag the CCaptureFilter for later cleanup.
+    这是捕获筛选器的创建调度。它创建CCaptureFilter对象，将其与AVStream过滤器对象相关联，并将CCaptureFilter打包以供稍后清理。
 
 Arguments:
 
