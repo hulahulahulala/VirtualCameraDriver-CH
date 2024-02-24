@@ -13,6 +13,7 @@
         The image synthesis and overlay code.  These objects provide image
         synthesis (pixel, color-bar, etc...) onto RGB24 and UYVY buffers as
         well as software string overlay into these buffers.
+    图像合成和叠加代码。这些对象在RGB24和UYVY缓冲区上提供图像合成（像素、色条等），并将软件串覆盖到这些缓冲区中。
 
 	This entire file, data and all, must be in locked segments.
 

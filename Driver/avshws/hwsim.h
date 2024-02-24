@@ -63,6 +63,7 @@ private:
     //
     // The image synthesizer.  This is a piece of code which actually draws
     // the requested images.
+    //图像合成器。这是一段实际绘制所需图像的代码。
     //
     CImageSynthesizer *m_ImageSynth;
 
@@ -70,6 +71,8 @@ private:
     // The synthesis buffer.  This is a private buffer we use to generate the
     // capture image in.  The fake "scatter / gather" mappings are filled
     // in from this buffer during each interrupt.
+    //合成缓冲液。这是一个我们用来在中生成捕获图像的专用缓冲区。在每次中断期间，
+    //伪“散射/聚集”映射都会从该缓冲区中填充。
     //
     PUCHAR m_SynthesisBuffer;
 
@@ -88,6 +91,7 @@ private:
 
     //
     // Scatter gather mappings for the simulated hardware.
+    //模拟硬件的分散-聚集映射。
     //
     KSPIN_LOCK m_ListLock;
     LIST_ENTRY m_ScatterGatherMappings;
@@ -95,6 +99,7 @@ private:
     //
     // Lookaside for memory for the scatter / gather entries on the scatter /
     // gather list.
+    //在分散/聚集列表中查找分散/聚集项的内存。
     //
     NPAGED_LOOKASIDE_LIST m_ScatterGatherLookaside;
 
@@ -105,6 +110,7 @@ private:
 
     //
     // The pause / stop hardware flag and event.
+    //暂停/停止硬件标志和事件。
     //
     BOOLEAN m_StopHardware;
     KEVENT m_HardwareEvent;
@@ -112,12 +118,14 @@ private:
     //
     // Maximum number of scatter / gather mappins in the s/g table of the
     // fake hardware.
+    //伪硬件的s/g表中分散/聚集映射引脚的最大数量。
     //
     ULONG m_ScatterGatherMappingsMax;
 
     //
     // Number of scatter / gather mappings that have been completed (total)
     // since the start of the hardware or any reset.
+    //自硬件启动或任何重置以来已完成的分散/聚集映射数（总计）。
     //
     ULONG m_NumMappingsCompleted;
 
@@ -135,6 +143,7 @@ private:
     //
     // The "Interrupt Time".  Number of "fake" interrupts that have occurred
     // since the hardware was started.
+    //“中断时间”。自硬件启动以来发生的“假”中断数。
     // 
     ULONG m_InterruptTime;
 
@@ -145,6 +154,7 @@ private:
     
     //
     // The DPC used to "fake" ISR
+    //DPC曾经“伪造”ISR
     //
     KDPC m_IsrFakeDpc;
     KTIMER m_IsrTimer;
