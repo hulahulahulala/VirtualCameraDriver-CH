@@ -40,6 +40,7 @@ int Device::Init()
 	return 1;
 }
 
+//这里应该是和驱动交流数据的入口
 int Device::SetData(PVOID dataPointer, ULONG dataLength)
 {
 	if (dataLength != WIDTH * HEIGHT * 3) 

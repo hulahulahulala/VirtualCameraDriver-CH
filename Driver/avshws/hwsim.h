@@ -206,6 +206,8 @@ public:
     // This is the free callback for the bagged hardware sim.  Not providing
     // one will call ExFreePool, which is not what we want for a constructed
     // C++ object.  This simply deletes the simulation.
+    //这是袋装硬件sim的免费回调。如果不提供，将调用ExFreePool，这不是我们构建的C++
+    //对象所希望的。这只是删除模拟。
     //
     static
     void
@@ -222,6 +224,7 @@ public:
     // Called from the simulated interrupt.  First we fake the hardware's
     // actions (at DPC) then we call the "Interrupt service routine" on
     // the hardware sink.
+    // 从模拟中断调用。首先，我们伪造硬件的操作（在DPC），然后在硬件接收器上调用“中断服务例程”。
     //
     void
     FakeHardware (
