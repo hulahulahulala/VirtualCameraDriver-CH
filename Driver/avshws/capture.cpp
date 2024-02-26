@@ -19,6 +19,9 @@
         the leading edge, copies data out of the common buffer and advances.
         Cloning would not be necessary with this technique.  It would be 
         similiar to the way "AVSSamp" works, but it would be pin-centric.
+        对于公共缓冲区DMA，一般的技术是使用KsPinAttemptProcessing进行DPC调度处理。
+        处理例程获取前沿，将数据从公共缓冲区中复制出来并继续前进。这种技术不需要克隆。
+        这将类似于“AVSSamp”的工作方式，但它将以引脚为中心。 
 
     History:
 
@@ -153,6 +156,7 @@ Return Value:
     // If we succeeded so far, stash the video info header away and change
     // our allocator framing to reflect the fact that only now do we know
     // the framing requirements based on the connection format.
+    //如果到目前为止我们成功了，请将视频信息标头隐藏起来，并更改分配器的帧设置，以反映这样一个事实，即只有现在我们才知道基于连接格式的帧设置要求。
     //
     PKS_VIDEOINFOHEADER VideoInfoHeader = NULL;
 
