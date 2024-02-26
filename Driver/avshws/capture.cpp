@@ -263,7 +263,7 @@ Return Value:
 {
 
     PAGED_CODE();
-
+    //The KS_VIDEOINFOHEADER structure describes the bitmap and color information for a video stream.
     PKS_VIDEOINFOHEADER ConnectionHeader =
         &((reinterpret_cast <PKS_DATAFORMAT_VIDEOINFOHEADER> 
             (m_Pin -> ConnectionFormat)) -> 
@@ -372,6 +372,8 @@ Return Value:
         // I'm also choosing to do this since I need to keep track of the
         // virtual addresses corresponding to each mapping since I'm faking
         // DMA.  It simplifies that too.
+        //为了优化，在这个特定的示例中，我将每帧只保留一个克隆流指针。这使这里的逻辑复杂化，但简化了完成。
+        //我也选择这样做，因为我需要跟踪每个映射对应的虚拟地址，因为我是伪造DMA。它也简化了这一点。
         //
         if (!m_PreviousStreamPointer) {
             //
